@@ -25,3 +25,35 @@ Context-free language(CFL): generate from context-free grammar(CFG)
 
 All regular languages are context-free language.
 
+CFG -> CFL <- PDA
+
+Regular Expression -> Regular Language <- DFA/NFA
+
+
+
+CFG: G = (V, $\Sigma$, R, S)
+
+CFL: some CFG generates it.
+
+Build a CFG: Try to observe the special case of CFL, |$\omega$|=0, |$\omega$|=1, ...
+
+​	Then proof L = L(G), that is L $\subseteq$ L(G) and L(G) $\subseteq$ L.
+
+Parse Tree: the path of a CFG generating a string.
+
+- Internal nodes are non-terminals
+- Leaves are e or terminals
+- Edges form a string
+
+Parse tree of a string is not unique. Example: a + a * a, we can make S -> S+S first, or S-> S*S first.
+
+Ambiguous CFG: for $\omega \in L(G)$, there are two or more parse trees with roots S and yields $\omega$.
+
+⭐We can change the Rules of CFG, to make it not ambiguous. (Make S -> S+S first only)
+
+Inherently ambiguous CFL: every CFG that generates this language is ambiguous.
+
+
+
+Proof that every Regular Language is Context-Free Language.
+
