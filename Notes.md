@@ -61,3 +61,22 @@ Inherently ambiguous CFL: every CFG that generates this language is ambiguous.
 
 Proof that every Regular Language is Context-Free Language.
 
+
+
+
+
+PDA: pushdown automata = NFA＋stack
+
+PDA P = (K, $\Sigma$, $\Gamma$, $\Delta$, s, F)
+
+​	Relation: (current state, string on top of stack, input symbol) -> (next state, replace string)
+
+​	Configuration: current state + unread input + stack content
+
+PDA P accept a string $\omega$  : (s,w,e) ->* (q,e,e)
+
+​	在这个过程中，消耗input symbol, 同时往stack中压进或替换或弹出 $\Gamma*$
+
+构造PDA: 让入栈和出栈平衡，利用NFA“猜测”的功能
+
+CFG <=> PDA
